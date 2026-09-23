@@ -1,7 +1,7 @@
 ---
 name: 变更日志 Changelog
 type: meta
-last_updated: 2026-09-17
+last_updated: 2026-09-23
 ---
 
 # 变更日志
@@ -12,6 +12,7 @@ last_updated: 2026-09-17
 
 ## 2026-09
 
+- **2026-09-23** · `index.md`、`AGENTS.md`、`ctrip/_index.md`、`_meta/plugin-integration.md` · 修正规范路由与管辖关系：明确“Token 复用不等于规则继承”，brand / feature 专属规范先认领并独立审核，general 仅对未被专属规范认领的内容兜底；插件新增 Ownership Map 执行顺序，避免携程自营等专属图层被通用色彩规则重复判断 · 起因：用户发现全局索引中的携程自营示例与实际专属颜色管辖逻辑不一致
 - **2026-09-17** · `_shared/figma-structure.md` · 从《写给设计师的 DOM 科普：AI 时代，你的图层树为什么突然重要了》提炼 Figma 图层结构与机器可读性原则；原 PDF 归档至 `_sources/shared/general/`，并更新共享索引、全局索引与来源清单。页面设为 `status: draft`、`figma_plugin_active: false`，尚未形成可执行规则，不影响现有生产校验 · 起因：用户授权将科普材料消化进 Wiki
 - **2026-09-14** · 全库 · AI 入口文件改名：`CLAUDE.md` → `AGENTS.md`。理由：`CLAUDE.md` 是 Claude 专属加载名，换用其他 AI 工具时规则不会自动生效，与「纯 Markdown、不绑供应商」的定位矛盾；`AGENTS.md` 为跨工具通用约定名，Claude / Codex / Cursor 均可自动加载。同步更新文件内标题与 `README.md` 目录一览 · 起因：用户提出命名应中性化
 - **2026-09-14** · 全库 · 根目录改名：`knowledge-base` → `vued-spec-wiki`。同步更新 `README.md` 目录一览与 `_meta/plugin-integration.md` 的插件加载入口两处写死路径 · 起因：用户指定新目录名。**注意：插件按路径读取本库，改名后需同步插件侧的配置，否则加载入口失效**

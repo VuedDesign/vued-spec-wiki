@@ -1,7 +1,7 @@
 ---
 name: Figma 插件集成规范 Plugin Integration
 type: meta
-last_updated: 2026-09-11
+last_updated: 2026-09-23
 ---
 
 # Figma 插件集成规范
@@ -32,24 +32,34 @@ last_updated: 2026-09-11
 - 被标注为 Trip → 加载所有 `app: trip` 或 `app: shared` 的规范
 - 未标注时 → 提示用户选择
 
+### 规范优先级
+
+同一 App 内采用：**brand / feature 专属规范认领优先，general 规范兜底**。目录层级用于组织内容，不代表规则可以叠加执行。专属规范引用 general Token 时，只复用 Token 名称与基础值，不继承 general 的场景审核逻辑。
+
 ---
 
 ## 二、规则执行顺序
 
-对每个待校验图层，按以下顺序执行：
+插件必须先完成“专属认领”，再执行“通用兜底”。不得仅按 general → brand → feature 的目录顺序依次叠加规则。
 
-1. **作用域判定 (Scope Gate)**
-   - 若某规范 frontmatter 有 `scope_gate` 字段（如"携程自营"的 Hit Test），先执行判定
-   - 未通过判定 → 跳过整份规范
-2. **全局占比规则 (Global Rules)**
-   - 以顶级 Frame / Module 为单元
-   - 累加面积后计算比例
-   - 只对 general 层规范触发
-3. **图层级 Token 规则 (Layer-Level Rules)**
-   - 逐图层遍历
-   - 按各规范的"插件触发条件"章节判定
-4. **报错聚合**
-   - 收集所有触发的规则
+1. **收集专属规范 (Collect Dedicated Rules)**
+   - 加载当前 App 下所有 `scope: brand` 与 `scope: feature` 的生产规则
+   - 对每个待校验图层执行相应的 `scope_gate` / Hit Test
+2. **建立图层管辖映射 (Ownership Map)**
+   - 命中专属作用域 → 记录该图层及其被认领子树的 owner
+   - 未命中 → owner 为空，保留给 general 兜底
+   - 同一图层命中多个专属规范时，选择作用域更具体者；无法唯一判定时报告路由冲突，不叠加执行
+3. **执行专属规则 (Dedicated Validation)**
+   - 对 owner 不为空的图层，仅执行其 owner 对应的 brand / feature 规则
+   - 专属页面引用 general Token，仅用于解析 Token 名称和基础值，不触发 general 的语义审核条件
+4. **执行通用规则 (General Fallback)**
+   - 对 owner 为空的图层执行 general 图层级规则
+   - owner 不为空的图层必须从 general 图层级校验中排除，避免重复或矛盾报错
+5. **执行全局占比规则 (Global Rules)**
+   - 以顶级 Frame / Module 为校验单元，按各 general 页面明示的统计口径计算
+   - 专属图层是否进入分子或分母，必须由对应全局规则明确声明；未声明时不得自行推断
+6. **报错聚合**
+   - 收集所有触发规则，记录规则来源与 owner
    - 按严重程度（error / warning）分组呈现
 
 ---

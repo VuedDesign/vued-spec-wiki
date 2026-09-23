@@ -1,7 +1,7 @@
 ---
 name: 全局索引 Root Index
 type: index
-last_updated: 2026-09-17
+last_updated: 2026-09-23
 ---
 
 # 设计规范知识库 · 全局索引
@@ -27,7 +27,7 @@ last_updated: 2026-09-17
 | **Brand 品牌类** | `{app}/brand/` | 品牌专用视觉规范 | 携程自营、携程优选 |
 | **Feature 功能类** | `{app}/feature/` | 特定组件/场景的规范 | Foot bar、Banner、信息提示 |
 
-**引用关系**：品牌类与功能类**引用**通用型的令牌，不重复定义。例如"携程自营"页面里的可用颜色列表，全部引用 `ctrip/general/info-color` 中定义的 Token。
+**引用与管辖关系**：品牌类与功能类可以引用通用层的 Token 名称和基础值，但专属场景的允许范围、组合方式与审核逻辑由对应的 brand / feature 规范定义。**Token 复用不等于规则继承**：图层一旦被专属规范认领，专属规范优先，general 规范对该图层让渡、不重复校验；只有未被任何专属规范认领的内容，才由 general 规范兜底。专属规范也可以定义通用层没有的专属值。
 
 ---
 
@@ -43,10 +43,10 @@ last_updated: 2026-09-17
 ## AI 查询流程
 
 1. **确定 App**：用户在 Ctrip 还是 Trip 场景？
-2. **确定分层**：问题涉及原子规范（general）？品牌规范（brand）？功能组件（feature）？
-3. **打开对应页面**：读 frontmatter 与正文
-4. **沿引用跳转**：如遇 `[[link]]`，跟随打开
-5. **回答时给出出处**：`按 [[ctrip/general/info-color]] 的规定...`
+2. **先判定专属作用域**：问题或图层是否明确属于某个 brand / feature？若命中，先进入对应专属规范并执行其作用域判定。
+3. **再由 general 兜底**：仅当内容未被任何专属规范认领时，才进入 general；属性是颜色、字号或间距，并不自动意味着优先查 general。
+4. **打开对应页面**：读 frontmatter 与正文，必要时沿 `[[link]]` 查询 Token 基础定义，但不得借此把通用审核规则重新施加到专属图层。
+5. **回答时给出实际管辖页面**：例如携程自营颜色问题引用 `[[ctrip/brand/ctrip-self]]`，普通 Ctrip 信息色问题引用 `[[ctrip/general/info-color]]`。
 
 ---
 

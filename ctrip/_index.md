@@ -2,7 +2,7 @@
 name: Ctrip App 规范索引
 type: index
 app: ctrip
-last_updated: 2026-09-11
+last_updated: 2026-09-23
 ---
 
 # Ctrip App · 设计规范索引
@@ -13,7 +13,7 @@ last_updated: 2026-09-11
 
 ## General 通用型规范
 
-跨品牌、跨场景的原子级规范。所有 brand / feature 规范都应引用这里的令牌。
+面向未被专属规范认领内容的通用原子规范，也提供可被 brand / feature 复用的 Token 名称和基础值。专属规范可以引用这些 Token，但是否允许使用、如何组合及如何审核，仍由专属规范决定。
 
 - [[ctrip/general/info-color]] — **信息色彩规范 v1.7** · 全局面积占比 + 10 类语义色的图层级判定（生产中，准确率 90%+）
 - （待建）typography — 字号、字重、行高
@@ -47,6 +47,8 @@ last_updated: 2026-09-11
 
 ## 使用提示（给 AI）
 
-- 用户问"颜色相关"时先查 general/info-color
-- 用户问"携程自营 Logo / 标签 / Banner"时先查 brand/ctrip-self，但必须先通过其"作用域判定"
-- 品牌类规范里的"可用颜色白名单"通常是 general/info-color 中令牌的子集——冲突时以品牌类为准（局部覆盖优先）
+- **先识别专属场景，再识别属性。** “颜色相关”不自动等于先查 general/info-color。
+- 用户问“携程自营 Logo / 标签 / Banner / 颜色”时，先查 [[ctrip/brand/ctrip-self]] 并执行其作用域判定；命中后由携程自营规范独立管辖，general/info-color 对这些图层让渡、不重复校验。
+- 只有普通 Ctrip 内容或未被任何 brand / feature 规范认领的颜色问题，才由 [[ctrip/general/info-color]] 兜底。
+- 品牌类规范可以复用 general 中的 Token 名称和基础值，也可以定义专属值；**复用 Token 不代表继承 general 的审核条件**。
+- 同一属性发生冲突时，以作用域更具体的专属规范为准（局部覆盖优先）。
