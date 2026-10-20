@@ -13,7 +13,7 @@ last_updated: 2026-09-23
 ## 双 App 入口
 
 - [[ctrip/_index]] — **Ctrip App** 全部规范（携程主品牌）
-- [[trip/_index]] — **Trip App** 全部规范（Trip 国际品牌，规范待建）
+- [[trip/_index]] — **Trip App** 全部规范（信息色彩 v1.6 已按 Trip 原稿编为草稿，待评审）
 
 ---
 
@@ -46,7 +46,7 @@ last_updated: 2026-09-23
 2. **先判定专属作用域**：问题或图层是否明确属于某个 brand / feature？若命中，先进入对应专属规范并执行其作用域判定。
 3. **再由 general 兜底**：仅当内容未被任何专属规范认领时，才进入 general；属性是颜色、字号或间距，并不自动意味着优先查 general。
 4. **打开对应页面**：读 frontmatter 与正文，必要时沿 `[[link]]` 查询 Token 基础定义，但不得借此把通用审核规则重新施加到专属图层。
-5. **回答时给出实际管辖页面**：例如携程自营颜色问题引用 `[[ctrip/brand/ctrip-self]]`，普通 Ctrip 信息色问题引用 `[[ctrip/general/info-color]]`。
+5. **回答时给出实际管辖页面**：例如携程自营颜色问题引用 `[[ctrip/brand/ctrip-self]]`，普通 Ctrip 信息色问题引用现行 `[[ctrip/general/info-color-v1-8]]`；旧版 `[[ctrip/general/info-color]]` v1.7 仅供现有插件基线对照。
 
 ---
 
@@ -54,4 +54,4 @@ last_updated: 2026-09-23
 
 本 Wiki 同时作为 Figma 审核插件的规则源。插件加载规则时的路由方式见 [[_meta/plugin-integration]]。
 
-每份规范文档的 frontmatter 都带 `figma_plugin_active` 与 `accuracy_baseline` 字段，标注产线状态与实测准确率。
+每份规范文档的 frontmatter 都带 `figma_plugin_active` 字段；仅有已完成插件实测的规则才记录可选的 `accuracy_baseline`。Wiki 正式定稿不代表插件已经接入，具体状态以页面 frontmatter 与 [[_meta/plugin-integration]] 为准。

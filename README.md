@@ -6,12 +6,17 @@
 
 ## 一句话说明
 
-**这个文件夹里的每一份 Markdown 都同时干两件事**：给人读，给机器执行。
+**这个文件夹里的 Markdown 既供人查询，也为规则编译提供来源**；只有满足 `status: production` 且 `figma_plugin_active: true` 的规范才进入当前 Figma 插件自动校验。
 
-## 现有产线
+## 现有规范与插件状态
 
-- **Ctrip / general / info-color** v1.7 — 已投产，Figma 插件实测准确率 90%+
-- **Ctrip / brand / ctrip-self** v1.5 — 已投产，Figma 插件实测准确率 90%+
+- **Ctrip / general / info-color** v1.8 — Wiki 现行正式规范（`ctrip/general/info-color-v1-8.md`），含 `Token/Black-5 (#C5C5C5)`；尚未上传或接入插件。旧版 `ctrip/general/info-color.md` v1.7 保留为现有插件基线（实测 0.90）
+- **Ctrip / brand / ctrip-self** v1.5 — Wiki 正式、Figma 插件已投产，实测准确率 90%+
+- **Ctrip / brand / ctrip-select** v1.1 — Wiki 已定稿；Figma 插件规则待另一位负责人接入与验证，尚无实测准确率基线
+
+## Trip 当前状态
+
+- **Trip / general / info-color** v1.6 — Wiki 已定稿，仅审信息文字／图标并补 `color-text-Placeholder (#6F7685)`；面积比例为非阻断设计参考，Figma 插件尚未接入（`figma_plugin_active: false`）
 
 ## 目录一览
 

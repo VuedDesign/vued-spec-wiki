@@ -6,7 +6,7 @@ app: ctrip
 scope: brand
 category: brand-identity
 status: production
-last_updated: 2026-09-11
+last_updated: 2026-10-13
 figma_plugin_active: true
 accuracy_baseline: 0.90
 scope_gate: "必须先通过 全局作用域判定 (Ctrip-Self Hit Test) 才能进入图层级校验"
@@ -18,7 +18,7 @@ tags: [brand, logo, ctrip-self, plugin-rule]
 
 # 携程自营 1\.5
 
-## 品牌介绍 \(Brand Context\)
+## 一、品牌介绍 \(Brand Context\)
 
 
 
@@ -53,7 +53,7 @@ tags: [brand, logo, ctrip-self, plugin-rule]
 
 
 
-## 全局作用域判定 \(Ctrip\-Self Hit Test\) 【统一前置】
+## 二、全局作用域判定 \(Ctrip\-Self Hit Test\) 【统一前置】
 
 
 
@@ -143,7 +143,7 @@ tags: [brand, logo, ctrip-self, plugin-rule]
 
 
 
-## 图层级校验字典 \(Layer Logic Rules\)
+## 三、图层级校验字典 \(Layer Logic Rules\)
 
 
 
@@ -412,7 +412,7 @@ tags: [brand, logo, ctrip-self, plugin-rule]
 
 
 
-## 组件资源
+## 四、组件资源
 
 
 

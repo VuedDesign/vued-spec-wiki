@@ -1,7 +1,7 @@
 ---
 name: 规范文档元规范 Schema
 type: meta
-last_updated: 2026-09-11
+last_updated: 2026-10-20
 ---
 
 # Schema：规范文档的元规范
@@ -89,7 +89,7 @@ last_updated: 2026-09-11
 
 ## 三、判定规则表格的推荐列（这是机器可读的关键）
 
-参考现有 `ctrip/general/info-color` 和 `ctrip/brand/ctrip-self` 的写法：
+参考现有 `ctrip/general/info-color-v1-8` 和 `ctrip/brand/ctrip-self` 的写法：
 
 | 列名 | 内容要求 |
 |---|---|
@@ -109,7 +109,7 @@ last_updated: 2026-09-11
 - **规则 A（非法使用）**：不在专属场景，却使用了专属色 → 报错
 - **规则 B（漏用专属）**：处于专属场景，却没使用专属色 → 报错
 
-范例见 [[ctrip/general/info-color]] 的 Brown-1 / [[ctrip/brand/ctrip-self]] 的 Logo。
+范例见 [[ctrip/general/info-color-v1-8]] 的 Brown-1 / [[ctrip/brand/ctrip-self]] 的 Logo。
 
 ---
 
@@ -119,8 +119,10 @@ last_updated: 2026-09-11
 |---|---|---|
 | `draft` | 初稿，未 review | 回答时提示"此规范尚未定稿" |
 | `review` | Review 中 | 回答时提示"此规范正在评审" |
-| `production` | 已投产 | 正常引用 |
+| `production` | Wiki 规范内容已定稿；不等于已上传 GitHub 或接入 Figma 插件 | 正常引用；实际发布与插件加载另行核对 |
 | `deprecated` | 已弃用 | 引导至 `deprecated_by` |
+
+> `status` 描述规范内容的正式程度，`figma_plugin_active` 描述插件接入状态；正式 Wiki 可以暂不进入插件。插件只加载 `production` 且 `figma_plugin_active: true` 的当前 App 规范，见 [[_meta/plugin-integration]]。
 
 ---
 
@@ -128,4 +130,4 @@ last_updated: 2026-09-11
 
 - 文件名：小写、连字符：`info-color.md`、`ctrip-self.md`、`foot-bar.md`
 - 目录：`{app}/{scope}/{filename}.md`
-- Wiki 互链：`[[ctrip/general/info-color]]`
+- Wiki 互链：`[[ctrip/general/info-color-v1-8]]`

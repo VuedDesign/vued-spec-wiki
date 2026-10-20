@@ -19,6 +19,7 @@
 2. **精准优先于流畅**：宁可说"Wiki 没有"，也不要编造色值 / 圆角 / 组件规格
 3. **区分 Ctrip / Trip**：任何回答前先确认用户涉及哪个 App，两套规范互不通用
 4. **区分三层**：general / brand / feature 各有各的适用场景，别混淆
+5. **区分现行 Wiki 与旧插件基线**：Ctrip 通用信息色查询使用 [[ctrip/general/info-color-v1-8]]；[[ctrip/general/info-color]] v1.7 暂供现有插件和历史对照，不能覆盖 v1.8 的 Wiki 口径。
 
 ---
 
@@ -55,7 +56,7 @@
 
 ### 步骤 5：回答
 
-- 引用出处：`按 [[ctrip/general/info-color]] 的规定...`
+- 引用出处：`按 [[ctrip/general/info-color-v1-8]] 的规定...`
 - 引用色值时同时给 Token ID 和 Hex：`Token/Blue-1 (#006FF6)`
 - 涉及判定规则时，明确指出触发条件（"规则 A / 规则 B"）
 
@@ -92,7 +93,7 @@
 3. **判断新增 vs 更新**：Wiki 里已有对应规范吗？
    - 无 → 新建页面，按 [[_meta/schema]] 补 frontmatter
    - 有 → 加载已有页面 diff 对比，识别冲突 → 写入 [[_meta/conflicts]] 交人拍板
-4. **写入内容**：保持"判定逻辑 + 触发条件 + 报错文案"的机器可读格式（参见 [[ctrip/general/info-color]] 与 [[ctrip/brand/ctrip-self]] 的写法）
+4. **写入内容**：保持"判定逻辑 + 触发条件 + 报错文案"的机器可读格式（参见现行 [[ctrip/general/info-color-v1-8]] 与 [[ctrip/brand/ctrip-self]] 的写法）
 5. **更新引用与索引**：
    - 新页在 frontmatter `related` 中链回相关页面
    - 更新对应 `_index.md`
@@ -115,6 +116,6 @@
 
 ## 七、页面命名与链接约定
 
-- 路径小写、连字符：`ctrip/general/info-color.md`
-- Wiki 互链：`[[ctrip/general/info-color]]`
+- 路径小写、连字符：`ctrip/general/info-color-v1-8.md`
+- Wiki 互链：`[[ctrip/general/info-color-v1-8]]`
 - 段落 anchor：`[[ctrip/brand/ctrip-self#Logo]]`

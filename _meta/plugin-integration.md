@@ -1,7 +1,7 @@
 ---
 name: Figma 插件集成规范 Plugin Integration
 type: meta
-last_updated: 2026-09-23
+last_updated: 2026-10-20
 ---
 
 # Figma 插件集成规范
@@ -116,6 +116,18 @@ Wiki 里"插件报错文案"章节的文字应作为**模板**注册到插件，
 |---|---|---|---|
 | [[ctrip/general/info-color]] | 1.7 | 0.90 | production |
 | [[ctrip/brand/ctrip-self]] | 1.5 | 0.90 | production |
+
+> **Wiki 现行正式规范、插件待接入**：[[ctrip/general/info-color-v1-8]] v1.8 在 Black-3 移除录入项占位用途，并新增 `Token/Black-5 (#C5C5C5)` 用于查询框／表单等录入项暗提示；灰色背景上若默认色可读性差，可由设计师加深至 `Token/Black-4 (#AAAAAA)`，没有机器阈值，不把条件例外编成自动报错。该页当前 `status: production`、`figma_plugin_active: false`；现有插件仍使用上表 v1.7 基线。插件负责人须先落实可靠的暗提示身份识别、正反样本和与既有 Black-1／Black-3 规则的回归，再单独接入并启用 v1.8。不要把 v1.7 的 0.90 实测基线挪到 v1.8。现行 v1.8 另按用户澄清将 Orange-1 定位为重点提醒（`Attention`）、Red-1 定位为更高等级警示（`Warning`／`Alert`）；仅图层名中的 `Warning` 字样不能自动决定层级，含义不明时人工复核，禁用态不能一律导向 Red；Orange 用于禁用文字时的 Black-3 仅作人工复核建议，不自动报错或强制替换。用户已确认热卖（Hot）与即将售罄场景可使用 `Token/Red-1 (#F5190A)`；插件识别需可靠业务证据，不能仅靠文字包含 `Hot`。
+
+> **Trip 信息色彩 v1.6 Wiki 正式稿、插件待接入**：[[trip/general/info-color]] v1.6 已按 Trip 原稿与用户澄清定稿，当前 `status: production`、`figma_plugin_active: false`；不能把 Wiki 定稿当作插件已上线。用户已确认 `Score` 为点评分、`Hot Score` 为景点热度分，按精确命名及更具体的 `Hot Score` 归属优先处理，旧 `includes("Score")` 规则不得自动使用；插件仍需回归。用户也确认全局辅助／功能／专有色 `<10%` 包含 Rate、Trip Best 和 Discount；Discount 自身另有 `<5%` 理想参考目标，两项比例分别观察但均非强制报错／警示，分母已按所有信息文字与图标的可见面积总和确认。减价／优惠数值归 `color-accent-discount (#D81E60)`，静态品牌色需依据官方品牌专属组件身份而非 `Logo`／`Brand`／`Header` 名称关键词；#003–#006 已归档。用户进一步确认 Trip Best 先过官方组件／Logo 身份，信息色只检查文字与图标，背景填充不进入分子；第 9 节按 Token 独立重排 Neutral Primary／Secondary／Tertiary／color-text-Placeholder，保留原稿触发语义；录入项暗提示 `color-text-Placeholder (#6F7685)` 与 `color-text-tertiary (#6F7685)` 同色但为用户确认的官方组件中两个实际 Token，需可靠读取组件 Token／变量绑定身份；无法读取时人工复核，不单凭 Hex 判错。全局中性色 `>60%`、主色 `<30%`、功能／专有色 `<10%` 与 Discount 额外 `<5%` 均以所有可见信息文字与图标的面积总和为分母，**仅能作为特殊场景可偏离的非阻断设计师提醒，不得生成报错或警示**；#007 已归档。插件仍需核验实际组件身份、面积计算与正反样本；不得仅因原稿已有“插件触发条件”就将其投产，也不得用 Ctrip 规则填补 Trip 未决口径。
+
+### Wiki 正式、插件待接入
+
+- [[ctrip/brand/ctrip-select]] v1.1：`status: production`、`figma_plugin_active: false`。内容已定稿供查询，**当前不进入插件自动规则集**；实际接入、回归、发布及实测基线由插件负责人完成，不能借用携程自营的 0.90 基线。
+- 该页记录了优选专属作用域判定和 Logo / 标签 / 筛选 / Banner / 品牌页候选规则，8 个条目均列出 target、规则 A/B 和对应反馈；其中部分 B 为人工复核而非自动报错。当前只有官方优选组件身份可靠命中；手绘近似、未登记的插件标记与普通图层名称不能作为自动 Hit。用户确认的优选品牌文字五色清单已归档：`Token/Blue-1 (#006FF6)`、`Token/Black-1 (#111111)`、`Token/Black-2 (#555555)`、`Token/Black-3 (#888888)`、`Token/White (#FFFFFF)`。它与图形勾 `Token/Orange-1 (#FF5500)` 的局部用途分开。用户已确认：官方优选品牌页／浮层优势信息组的标题与正文以组件的 `Token/Black-1 (#111111)` 为准，原稿蓝色赞只是图标示意、组件默认图标须按当前句子含义替换；信息组图标与文字色不再是冲突。此精确文字色仅适用于可靠识别的信息组标题／正文，优先于五色候选清单；本版白色反白 Logo 仅用于官方蓝底面性标签；其余可靠归属的优选品牌文字可在五色清单内由设计师自行选用，不设固定文字角色或背景映射，且不能自动继承自营的语义审核条件。组件 Key 只作为 `_sources/ctrip/brand/ctrip-select-figma-inspection-2026-10-13.md` 的核对证据。筛选中的官方完整矢量 Logo 本体可独立命中第 1 条规则，不要求独立 Filter Chip 身份，也不设“删掉 Logo 只剩优选文字”的漏用规则。插件投产前仍须确认未登记矢量的身份边界、混合容器及面积统计口径，建立品牌文字与信息组节点角色识别，生成正反样本并回归；不得仅因 Wiki 定稿就声称插件已上线。
+
+
+**携程优选插件转译的自营参考边界**：借鉴“先官方身份 Hit → 建立 Ownership Map → 只检查被认领 target → 用正反例回归”的执行顺序；不复制 `Ctrip-Self/*` 组件路径、图形结构／比例阈值、`plugin-data` 标记、白色 Logo 深底条件、金色规则、ΔE 阈值或 50 字硬上限。优选官方品牌页／浮层只认领已定义的品牌结构与优势信息组；普通卡片或普通筛选容器内的官方优选 Logo 只认领 Logo 本体，不能扩散到外层容器。未登记手工矢量的身份、反白 Logo 承载组件身份、混合字符计数、混合容器全局面积口径均维持人工复核，不因自营已投产而自动补全优选的插件实现。正反样本清单见 [[ctrip/brand/ctrip-select]] 第三章末尾。
 
 ---
 
