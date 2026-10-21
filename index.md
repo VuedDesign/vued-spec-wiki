@@ -1,7 +1,7 @@
 ---
 name: 全局索引 Root Index
 type: index
-last_updated: 2026-09-23
+last_updated: 2026-10-21
 ---
 
 # 设计规范知识库 · 全局索引
@@ -13,7 +13,7 @@ last_updated: 2026-09-23
 ## 双 App 入口
 
 - [[ctrip/_index]] — **Ctrip App** 全部规范（携程主品牌）
-- [[trip/_index]] — **Trip App** 全部规范（信息色彩 v1.6 已按 Trip 原稿编为草稿，待评审）
+- [[trip/_index]] — **Trip App** 全部规范（信息色彩 v1.6 已定稿为 Wiki 正式规范，插件未接入；品牌类、功能类待建）
 
 ---
 

@@ -2,7 +2,7 @@
 name: Ctrip App 规范索引
 type: index
 app: ctrip
-last_updated: 2026-10-20
+last_updated: 2026-10-21
 ---
 
 # Ctrip App · 设计规范索引
@@ -15,7 +15,7 @@ last_updated: 2026-10-20
 
 面向未被专属规范认领内容的通用原子规范，也提供可被 brand / feature 复用的 Token 名称和基础值。专属规范可以引用这些 Token，但是否允许使用、如何组合及如何审核，仍由专属规范决定。
 
-- [[ctrip/general/info-color-v1-8]] — **信息色彩规范 v1.8** · Wiki 现行正式规范；含 `Token/Black-5 (#C5C5C5)` 与灰底条件例外 `Token/Black-4 (#AAAAAA)`，插件未接入、尚未上传
+- [[ctrip/general/info-color-v1-8]] — **信息色彩规范 v1.8** · Wiki 现行正式规范；含 `Token/Black-5 (#C5C5C5)` 与灰底条件例外 `Token/Black-4 (#AAAAAA)`，已上传 GitHub，插件未接入
 - [[ctrip/general/info-color]] — **信息色彩规范 v1.7** · 冻结的旧版插件基线（实测 0.90）；仅供现有插件规则与历史对照，不作为当前 Wiki 查询的规范版本
 - （待建）typography — 字号、字重、行高
 - （待建）spacing — 间距刻度

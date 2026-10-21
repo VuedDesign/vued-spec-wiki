@@ -39,6 +39,7 @@ _sources/
 │       └── ctrip-self-v1.5-2026-09.md
 └── trip/
     ├── general/
+    │   └── trip-info-color-v1.6-2026-10-20.md
     └── brand/
 ```
 

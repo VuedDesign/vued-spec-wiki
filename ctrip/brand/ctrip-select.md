@@ -20,7 +20,7 @@ sources:
   - _sources/ctrip/brand/ctrip-select-info-group-clarification-2026-10-20.md
   - _sources/ctrip/brand/ctrip-select-final-scope-clarification-2026-10-20.md
   - _sources/ctrip/brand/ctrip-select-filter-logo-clarification-2026-10-20.md
-tags: [brand, ctrip-select, logo, tag, banner, plugin-rule, draft]
+tags: [brand, ctrip-select, logo, tag, banner, plugin-rule]
 ---
 
 # 携程优选 1.1

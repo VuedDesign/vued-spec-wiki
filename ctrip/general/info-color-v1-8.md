@@ -19,7 +19,7 @@ tags: [color, token, ctrip, plugin-rule]
 
 # Ctrip信息色彩规范1.8
 
-> **状态**：本页 v1.8 已定稿为 Ctrip Wiki 现行信息色彩规范，独立于旧版 `[[ctrip/general/info-color]]` v1.7 插件基线。`figma_plugin_active: false` 表示 v1.8 尚未接入 Figma 自动审核；v1.7 的 0.90 实测基线不能当作本版验证结果。本地定稿不等于已提交或上传 GitHub。
+> **状态**：本页 v1.8 已定稿为 Ctrip Wiki 现行信息色彩规范，独立于旧版 `[[ctrip/general/info-color]]` v1.7 插件基线。`figma_plugin_active: false` 表示 v1.8 尚未接入 Figma 自动审核；v1.7 的 0.90 实测基线不能当作本版验证结果。本页已随 `ec038d9` 上传 GitHub；上传不等于插件已接入。
 
 ### 核心校验逻辑与全局规则 \(Global Rules\)
 

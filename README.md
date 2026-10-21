@@ -10,7 +10,7 @@
 
 ## 现有规范与插件状态
 
-- **Ctrip / general / info-color** v1.8 — Wiki 现行正式规范（`ctrip/general/info-color-v1-8.md`），含 `Token/Black-5 (#C5C5C5)`；尚未上传或接入插件。旧版 `ctrip/general/info-color.md` v1.7 保留为现有插件基线（实测 0.90）
+- **Ctrip / general / info-color** v1.8 — Wiki 现行正式规范（`ctrip/general/info-color-v1-8.md`），含 `Token/Black-5 (#C5C5C5)`；已上传 GitHub，Figma 插件尚未接入。旧版 `ctrip/general/info-color.md` v1.7 保留为现有插件基线（实测 0.90）
 - **Ctrip / brand / ctrip-self** v1.5 — Wiki 正式、Figma 插件已投产，实测准确率 90%+
 - **Ctrip / brand / ctrip-select** v1.1 — Wiki 已定稿；Figma 插件规则待另一位负责人接入与验证，尚无实测准确率基线
 
@@ -32,11 +32,11 @@ vued-spec-wiki/
 │   ├── brand/                      品牌类（携程自营、携程优选…）
 │   └── feature/                    功能类（foot bar、banner…）
 │
-├── trip/                           Trip App 规范（结构镜像，内容待建）
+├── trip/                           Trip App 规范
 │   ├── _index.md
-│   ├── general/
-│   ├── brand/
-│   └── feature/
+│   ├── general/                    通用型（信息色彩 info-color v1.6 已定稿）
+│   ├── brand/                      品牌类（待建）
+│   └── feature/                    功能类（待建）
 │
 ├── _shared/                        两个 App 完全共用的规范
 ├── _sources/                       原始规范文档存档
