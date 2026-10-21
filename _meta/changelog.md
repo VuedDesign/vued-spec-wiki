@@ -12,6 +12,7 @@ last_updated: 2026-10-21
 
 ## 2026-10
 
+- **2026-10-21** · `AGENTS.md` · 在第五节编译流程新增第 7 步“联动校验”：规范内容、状态或发布情况变更后，须同步核对 README、全局及 App 索引、来源清单、冲突清单、插件集成说明、frontmatter 与互链，避免状态遗漏；上传前整体复核 · 起因：用户发现 README 中 Trip 目录未同步，要求以后联动校验
 - **2026-10-21** · `README.md`、`index.md`、`ctrip/_index.md`、`ctrip/general/info-color-v1-8.md`、`ctrip/brand/ctrip-select.md`、`_meta/conflicts.md`、`_sources/README.md` · 同步 Trip v1.6 与已发布状态：README 目录树去掉“Trip 内容待建”并标出 general 信息色彩 v1.6 已定稿、brand／feature 待建；全局索引 Trip 入口由“草稿待评审”改为正式稿；Ctrip v1.8 相关“尚未上传”改为已随 `ec038d9` 上传 GitHub、插件仍未接入；移除携程优选正式稿残留的 `draft` 标签，更新冲突 #001 的过期状态，来源目录示例补 Trip 原稿。规范内容、Token、规则与插件状态均不变 · 起因：用户指出 README 中 Trip 目录仍为空，要求内容更新时整体同步相关文件
 - **2026-10-21** · `ctrip/brand/ctrip-select.md`、`_sources/ctrip/brand/ctrip-select-v1.0-text-2026-10-13.md`、`_sources/ctrip/brand/ctrip-select-figma-inspection-2026-10-13.md`、`_sources/README.md` · 发布前将携程优选原稿来源改为仅文字归档；七处无法随仓库提供的参考图条目移除，原始七图 ZIP 仅维护者本地保存且从未推送的提交历史中移除。纯文字来源记原始文件及 ZIP 哈希，品牌规则、版本和插件状态不变 · 起因：用户同意不上传原始设计图片的更安全发布方式
 - **2026-10-20** · `ctrip/general/info-color-v1-8.md`、`trip/general/info-color.md` · 发布前仅清理新增 Wiki 页的行尾和文件末尾空白；逐字节归档的 Trip 原稿不改动，Token、规则与状态均不变 · 起因：上传 GitHub 前执行差异检查

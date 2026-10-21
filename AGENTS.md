@@ -98,6 +98,18 @@
    - 新页在 frontmatter `related` 中链回相关页面
    - 更新对应 `_index.md`
 6. **写变更日志**：在 [[_meta/changelog]] 加一行
+7. **联动校验（每次改动规范内容、状态或发布情况后必做）**：不能只改当前页。逐项核对下列文件里与本次改动相关的描述，把过期的同步改掉：
+   - `README.md`：现有规范状态、目录一览
+   - `index.md`：全局 App 入口说明
+   - 对应 App 的 `_index.md`：规范清单与当前状态
+   - `_sources/README.md`：来源清单与目录示意
+   - [[_meta/conflicts]]：相关冲突的状态与边界
+   - [[_meta/plugin-integration]]：插件接入状态说明
+   - 页面 frontmatter：`status`、`version`、`last_updated`、`tags`、`related`、`sources` 与正文状态一致
+   - 互链：全部 `[[link]]` 都能指向存在的页面
+   - 草稿／正式、是否上传 GitHub、插件是否接入这三种状态不能混写，也不能遗留过期说法
+
+   校验结果与改动范围一并写入 [[_meta/changelog]]。上传 GitHub 前再整体复核一次。
 
 ---
 
