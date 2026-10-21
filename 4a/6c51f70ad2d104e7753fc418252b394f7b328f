@@ -1,0 +1,33 @@
+_meta/conflicts.md
+  s_f303ef81335fbe::t_bd055b48b12985 4,76,83
+_meta/changelog.md
+  s_f303ef81335fbe::t_bd055b48b12985 15
+ctrip/brand/ctrip-select.md
+  s_f303ef81335fbe::t_bd055b48b12985 23
+index.md
+  s_f303ef81335fbe::t_bd055b48b12985 4,16
+README.md
+  s_f303ef81335fbe::t_bd055b48b12985 13,35,37-39
+_sources/README.md
+  s_f303ef81335fbe::t_bd055b48b12985 42
+ctrip/general/info-color-v1-8.md
+  s_f303ef81335fbe::t_bd055b48b12985 22
+ctrip/_index.md
+  s_f303ef81335fbe::t_bd055b48b12985 5,18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.50-trip",
+  "base_commit_sha": "4a6c51f70ad2d104e7753fc418252b394f7b328f",
+  "prompts": {},
+  "sessions": {
+    "s_f303ef81335fbe": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1573d-6be9-70c1-9984-f4cbccf65f79",
+        "model": "kr-claude-opus-5.5[1M]"
+      },
+      "human_author": "callent13 <265693505+callent13@users.noreply.github.com>"
+    }
+  }
+}
