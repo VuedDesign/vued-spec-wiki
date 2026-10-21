@@ -1,0 +1,21 @@
+_meta/changelog.md
+  s_1cf75fd0a7a587::t_7989f9d1318cff 15
+AGENTS.md
+  s_1cf75fd0a7a587::t_7989f9d1318cff 101-112
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.50-trip",
+  "base_commit_sha": "0a7c8046d6e63ffcc00151e42cc5cb2ce76d4100",
+  "prompts": {},
+  "sessions": {
+    "s_1cf75fd0a7a587": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "01a1573d-6be9-70c1-9984-f4cbccf65f79",
+        "model": "unknown"
+      },
+      "human_author": "callent13 <265693505+callent13@users.noreply.github.com>"
+    }
+  }
+}
