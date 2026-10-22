@@ -71,5 +71,5 @@ vued-spec-wiki/
 
 ## 联系人
 
-- 项目发起 / 维护：（待填）
-- Figma 插件负责人：（待填）
+- 项目发起 / 维护：Callen
+- Figma 插件负责人：Jacey
